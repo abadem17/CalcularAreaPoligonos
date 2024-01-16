@@ -1,8 +1,15 @@
 package Eje9_9;
 
 public class Triangulo extends Poligono{
-    private double lado1,lado2,lado3;
+    private double lado1,lado2,lado3,area;
 
+    public Triangulo(int nLados, double lado1, double lado2, double lado3, double area) {
+        super(nLados);
+        this.lado1 = lado1;
+        this.lado2 = lado2;
+        this.lado3 = lado3;
+        this.area = area;
+    }
     public Triangulo(int nLados, double lado1, double lado2, double lado3) {
         super(nLados);
         this.lado1 = lado1;
@@ -37,7 +44,7 @@ public class Triangulo extends Poligono{
     @Override
     public String toString() {
         return "Triangulo:\n" + super.toString()+"\nlado1= " + lado1 + ", lado2= " + lado2 +
-                ", lado3= " + lado3;
+                ", lado3= " + lado3+", area= " + area;
     }
     @Override
     public double area(){
